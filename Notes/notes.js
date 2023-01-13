@@ -109,7 +109,7 @@ _ Variables - Wrap with curly braces
 
 
 # ⎛⎝(•‿•)⎠⎞
-# SECTION 2 - BUILDING WITH REUSABLE COMPONENTS
+# SECTION 3 - BUILDING WITH REUSABLE COMPONENTS
 ##################################################
 -> ###############################################
 >> ###############################################
@@ -169,4 +169,46 @@ _ the images that we are trying to console.log right now are going to be served 
 >> If the image is larger than 9.7 kilobytes, then it gets treated as a separate file and it will be served up as a separate file by the development server. 
 _ So that is why we see two very different looking console logs here.
 _ See image s03/including-images.jpg
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 4 - STATE: HOW TO CHANGE YOUR APP
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 40. App Overview
+# 41. Initial App Setup
+# 42. Introducing the Event System
+# 43. Events in Detail
+# 44. Variations on Event Handlers
+# Quiz 6: Quiz on Events
+# Coding Exercise 4: Exercise with Events
+# 45. Exercise Solution
+# 46. Introducing the State System
+# 47. More on State
+# 48. Understanding the Re-Rendering Process
+# Quiz 7: Got These Five Points?
+# 49. Why Array Destructuring?
+# 50. Back to the App
+# 51. Picking a Random Element
+# 52. List Building in React
+# 53. Images for the App
+# 54. Loading and Showing SVGs
+# 55. Increasing Image Size
+# 56. Adding Custom CSS
+# 57. Finalizing Styling
+# 58. App Wrapup and Review
+_  ###############################################
+
+# 47. More on State
+_ Data that changes as the user interacts with our app
+_ When this data changes, React will update content on the screen automatically
+>> This is one and only way we can change what content React shows
+* Even other libs that appear to update content use the state system behind the scenes
+
+
+
 */
