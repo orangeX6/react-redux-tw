@@ -269,8 +269,53 @@ _ child-to-parent-communication
  * SEE IMAGE 
  _ handling-text-inputs
 
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 6 - HOW TO HANDLE FORMS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 83. App Overview
+# 84. Initial Setup
+# 85. State Location
+# 86. Reminder on Event Handlers
+# 87. Extra CSS
+# 88. Receiving New Titles
+# 89. Adding Styling
+# 90. Updating State
+# 91. Don't Mutate That State!
+# 92. State Updates - Cheat Sheet
+# 93. [Optional] Adding Elements to the Start or End
+# Coding Exercise 6: Adding Elements
+# 94. [Optional] Exercise Solution
+# 95. [Optional] Inserting Elements
+# Coding Exercise 7: Inserting Elements
+# 96. [Optional] Exercise Solution
+# 97. [Optional] Removing Elements
+# Coding Exercise 8: Removing Elements
+# 98. [Optional] Exercise Solution
+# 99. [Optional] Modifying Elements
+# 100. [Super Optional] Why the Special Syntax?
+# Coding Exercise 9: Modifying Elements
+# 101. [Optional] Exercise Solution
+# 102. [Optional] Adding, Changing, or Removing Object Properties
+# 103. Cheatsheet for State Changes
+# 104. Adding a Book, For Real!
+# 105. Generating Random ID's
+# 106. Displaying the List
+# 107. Deleting Records
+# 108. Toggling Form Display
+# 109. Default Form Values
+# 110. Updating the Title
+# 111. Closing the Form on Submit
+# 112. A Better Solution!
+# 113. Collapsing Two Handlers into One
+# 114. Adding Images
+_  ###############################################
 
- # 78. Handling List Updates
-# 79. Notes on Keys
+
+# 90. Updating State
+IMPORTANT
+_ LEARN ABOUT THIS IN THE IMAGES IN arrayAndState Folder
 
 */
