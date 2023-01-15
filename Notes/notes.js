@@ -210,5 +210,67 @@ _ When this data changes, React will update content on the screen automatically
 * Even other libs that appear to update content use the state system behind the scenes
 
 
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 5 - USING AN API WITH REACT
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 59. App Overview
+# 60. Project Setup
+# 61. The Path Forward
+# 62. Overview of HTTP Requests
+# 63. Understanding the API
+# 64. Making an HTTP Request
+# 65. [Optional] Using Async:Await
+# 66. Data Fetching Cleanup
+# 67. Thinking About Data Flow
+# 68. Child to Parent Communication
+# 69. Implementing Child to Parent Communication
+# Quiz 8: Upward Communication
+# 70. Handling Form Submission
+# 71. Handling Input Elements
+# 72. [Optional] OK But Why?
+# Coding Exercise 5: Creating a Controlled Input
+# 73. Exercise Solution
+# 74. Running the Search
+# 75. Reminder on Async:Await
+# 76. Communicating the List of Images Down
+# 77. Building a List of Images
+# 78. Handling List Updates
+# 79. Notes on Keys
+# 80. Displaying Images
+# 81. A Touch of Styling
+# 82. App Wrapup
+_  ###############################################
+
+# 67. Thinking About Data Flow
+-> We use a prop system to communicate information from a parent to a child
+-> Parent component 'App' can send the list of images down to the child component 'ImageList' using props
+
+-> Whenever user presses the enter key in search bar we need to somehow take the searchTerm produced in child component 'Searchbar' and send it up to the parent component 'App'
+! TOTALLY OPPOSITE OF THE PROP SYSTEM WE KNOW
+
+# 68. CHILD TO PARENT COMMUNICATION
+! Props system is only for parent to child component is NOT SUPER ACCURATE
+* see image 
+_ child-to-parent-communication
+  
+# 71. Handling Input Elements
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    //! NEVER EVER EVER DO THIS
+    onSubmit(document.querySelector('input').value);
+  };
+
+ ! Don't try to get a value out of an input using a query selector 
+ >> The way React handles form elements (text, input, checkboxes, radio buttons, etc) is a little weird
+
+ * SEE IMAGE 
+ _ handling-text-inputs
+
+
+ # 78. Handling List Updates
+# 79. Notes on Keys
 
 */
