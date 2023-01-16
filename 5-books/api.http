@@ -1,0 +1,29 @@
+# Get all books
+GET http://127.0.0.1:3001/books HTTP/1.1
+Content-Type: application/json
+
+###
+
+# Create a book
+POST http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title" : "Lord Of The Rings"
+}
+
+###
+
+# Update a book
+PATCH http://localhost:3001/books/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title":"The Bourne Identity"
+}
+
+###
+
+# Delete a book
+DELETE http://localhost:3001/books/1 HTTP/1.1
+Content-Type: application/json

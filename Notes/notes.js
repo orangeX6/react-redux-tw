@@ -269,6 +269,8 @@ _ child-to-parent-communication
  * SEE IMAGE 
  _ handling-text-inputs
 
+
+
 # ⎛⎝(•‿•)⎠⎞
 # SECTION 6 - HOW TO HANDLE FORMS
 ##################################################
@@ -318,4 +320,145 @@ _  ###############################################
 IMPORTANT
 _ LEARN ABOUT THIS IN THE IMAGES IN arrayAndState Folder
 
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 7 - DATA PERSISTENCE WITH API REQUESTS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 115. Adding Data Persistence
+# 116. Server Setup
+# 117. What Just Happened?
+# 118. How the API Works
+# 119. Introducing the REST Client
+# 120. ECONNREFUSED 127.0.0.1:3001 Errors in VSCode
+# 121. Using the REST Client
+# 122. Creating a New Record
+# 123. Fetching a List of Records
+# 124. Introducing useEffect
+# 125. useEffect in Action
+# 126. More on useEffect
+# Quiz 9: When Does it Run?
+# 127. Updating a Record
+# 128. Thinking About Updates
+# 129. Deleting a Record
+_  ###############################################
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 8 - COMMUNICATION USING THE CONTEXT SYSTEM
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 130. Introducing Context
+# 131. Context in Action
+# 132. Changing Context Values
+# 133. More on Changing Context
+# 134. Application vs Component State
+# 135. Refactoring to Use Context
+# 136. Refactoring the App
+# 137. Quick Note
+# 138. Reminder on Sharing with Context
+# 139. Props and Context Together
+# 140. Last Bit of Refactoring
+# 141. A Small Taste of Reusable Hooks
+_  ###############################################
+
+# 130. Introducing Context
+! CONTEXT IS NOT A REPLACEMENT FOR PROPS
+! CONTEXT IS NOT A REPLACEMENT FOR CENTRALIZED STATE STORES LIKE REDUX
+
+_ CONTEXT BY ITSELF IS A COMMUNICATION CHANNEL. 
+>> IT DOES'NT REALLY CARE ABOUT WHAT DATA YOU ARE SHARING OR HOW THAT DATA IS ORGANIZED
+-> REDUX IS ALL ABOUT ORGANIZATION OF DATA
+_ SO REDUX AND CONTEXT REALLY ARE DOING TWO DIFFERENT THINGS
+
+_ SEE CONTEXT IMAGES FOLDER
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 9 - DEEPER DIVE INTO HOOKS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 142. Return to useEffect
+# 143. Quick Note
+# 144. Understanding the Issue
+# 145. Applying the Fix
+# 146. ESLint is Good, but be Careful!
+# 147. Stable References with useCallback
+# 148. Fixing Bugs with useCallback
+# Quiz 10: Fixing UseEffect Bugs
+# 149. useEffect Cleanup Functions
+# 150. The Purpose of Cleanup Functions
+_  ###############################################
+
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 10 - CUSTOM NAVIGATION AND ROUTING SYSTEMS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 151. Project Overview
+# 152. Project Setup
+# 153. Some Button Theory
+# 154. Underlying Elements
+# 155. The Children Prop
+# 156. Props Design
+# 157. Validating Props with PropTypes
+# 158. PropTypes in Action
+# 159. Introducing TailwindCSS
+# 160. Installing Tailwind
+# 161. How to use Tailwind
+# 162. Review on Styling
+# 163. The ClassNames Library
+# 164. Building Some Variations
+# 165. Finalizing the Variations
+# 166. Using Icons in React Projects
+# 167. Issues with Event Handlers
+# 168. Passing Props Through
+# 169. Handling the Special ClassName Case
+_  ###############################################
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 11 - MASTERING THE STATE DESIGN PROCESS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 170. Project Organization
+# 171. Refactoring with Organization
+# 172. Component Overview
+# 173. Component Setup
+# 174. Reminder on Building Lists
+# 175. Quick Note
+# 176. State Design Process Overview
+# 177. Finding the Expanded Item
+# 178. Conditional Rendering
+# 179. Inline Event Handlers
+# 180. Variation on Event Handlers
+# 181. Conditional Icon Rendering
+# 182. Displaying Icons
+# 183. Adding Styling
+# 184. Toggling Panel Collapse
+# 185. Quick Note
+# 186. [Optional] Delayed State Updates
+# 187. [Optional] Functional State Updates
+# Quiz 11: Conditional Rendering
+# Coding Exercise 10: Event Handlers with Lists
+# 188. Exercise Solution
+_  ###############################################
 */
