@@ -400,7 +400,7 @@ _ SEE CONTEXT IMAGES FOLDER
 # 149. useEffect Cleanup Functions
 # 150. The Purpose of Cleanup Functions
 _  ###############################################
-
+_ Check useEffect images in notes
 
 
 
@@ -432,6 +432,53 @@ _  ###############################################
 # 169. Handling the Special ClassName Case
 _  ###############################################
 
+# 157. Validating Props with PropTypes
+_ prop-types
+-> Js Library to validate the props that get passed into your component
+->If someone passes down the incorrect kind of value(number instead of a boolean), a warning will appear in console
+-> Used to be very popular. Now Typescript does almost the same thing(and more)
+* npm i prop-types
+
+# 159. Introducing TailwindCSS
+-> Components get harder to read
+-> Tons of classNames to look upto apply any styling
+-> Some normal CSS features don't work well with Tailwind
+##########  WHY ???????? 
+-> The className soup is going to force you to write smaller and more reusable components
+
+# 160. Installing Tailwind
+>> Tailwind releases new version extremely frequently
+_ https://tailwindcss.com/docs/guides/create-react-app
+_ https://tailwindcss.com/docs/installation/framework-guides
+
+
+# 161. How to use Tailwind
+_ Using TailWind
+_ 1 Decide on a new styling rule you want to add
+_ 2 Go to tailwindcss.com/docs
+_ 3 Smash Ctrl+K as hard as possible (LOL)
+_ 4 Search for your styling rule
+_ 5 Add appropriate className to your elements
+
+
+# 163. The ClassNames Library
+_classnames
+-> JS library for building up a 'className' string based on different values
+-> Library is called 'classnames', but prop is 'className'
+-> npmjs.com/package/classnames
+
+# 166. Using Icons in React Projects
+_ react icons
+_ https://react-icons.github.io/react-icons/
+* npm install react-icons --save
+-> Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+
+
+IMPORTANT
+# 168 IMPORTANT 
+# 168. Passing Props Through
+
+
 
 # ⎛⎝(•‿•)⎠⎞
 # SECTION 11 - MASTERING THE STATE DESIGN PROCESS
@@ -461,4 +508,43 @@ _  ###############################################
 # Coding Exercise 10: Event Handlers with Lists
 # 188. Exercise Solution
 _  ###############################################
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 11 - MASTERING THE STATE DESIGN PROCESS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 189. Component Overview
+# 190. Designing the Props
+# 191. Component Creation
+# 192. [Optional] More State Design
+# 193. Finally... Implementation!
+# 194. Reminder on Event Handlers in Maps
+# 195. Dropdown as a Controlled Component
+# 196. Controlled Component Implementation
+# 197. Existence Check Helper
+# 198. Community Convention with Props Names
+# Coding Exercise 11: Form Controls - Prop Naming Convention
+# 199. Exercise Solution
+# 200. Adding Styling
+# 201. The Panel Component
+# 202. Creating the Reusable Panel
+# 203. A Challenging Extra Feature
+# 204. Document-Wide Click Handlers
+# 205. Event Capture and Bubbling
+# 206. Putting it All Together
+# 207. Why a Capture Phase Handler?
+# 208. Reminder on the useEffect Function
+# 209. Reminder on useEffect Cleanup
+# 210. Issues with Element References
+# 211. useRef in Action
+# 212. Checking Click Location
+
+_  ###############################################
+
+
 */
