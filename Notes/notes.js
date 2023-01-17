@@ -509,11 +509,38 @@ IMPORTANT
 # 188. Exercise Solution
 _  ###############################################
 
+# 180. Variation on Event Handlers
+For anyone who is curious (as I was) how else you can save a reference to the index, I came up with three more ways:
+
+1. using bind
+2. using data attribute
+3. returning a function
+For example we have our handleClick defined like this:
+const handleClick = (i, e) => {
+       console.log(parseInt(e.target.dataset.index)
+       console.log(i);
+};
+_ Using bind, data attribute
+<div onClick={handleClick.bind(null, index)} data-index={index}>{item.label}</div>
+
+_Returning a function:
+const handleClick = (i) => {
+     return () => console.log(i);
+};
+<div onClick={handleClick(index)}>{item.label}</div>
+
+# 186. [Optional] Delayed State Updates
+-> IN BROWSER DEV TOOLS IF WE GO TO INSPECT AND SELECT AN ELEMENT, WE CAN ACCESS THAT ELEMENT IS THE BROWSER CONSOLE USING $0
+-> you can then use event handlers and much more stuff on it
+
+_ $0
+>> <div class="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer">The Raven<span class="text-2xl"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 8 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.5 3L7 4.5 3.25 8 7 11.5 5.5 13l-5-5 5-5z"></path></svg></span></div>
+_ $0.click()
 
 
 
 # ⎛⎝(•‿•)⎠⎞
-# SECTION 11 - MASTERING THE STATE DESIGN PROCESS
+# SECTION 12 - MASTERING THE STATE DESIGN PROCESS
 ##################################################
 -> ###############################################
 >> ###############################################
@@ -545,6 +572,134 @@ _  ###############################################
 # 212. Checking Click Location
 
 _  ###############################################
+# 207. Why a Capture Phase Handler?
+IMPORTANT
+_ check s12 images, and rewatch video when in doubt
+_ performance.now() 
+! to debug such an error
+-> CHECK DROPDOWN.JS
+>> In devtools - (Applied an capture phase event listener)
+const dropdown = document.querySelector('.w-48')
+const handleClick = (e)=> {
+    window.timeThree = performance.now()
+    if(dropdown.contains(e.target)) {
+        console.log('Inside dropdown')
+    } else {
+        console.log('OUTSIDE Dropdown')
+    }
+}
+
+document.addEventListener('click',handleClick,true)
+
+2VM12954:4 Inside dropdown
+
+IMPORTANT
+->logging out time taken by each phase
+window.timeOne
+50508.80000001192
+window.timeTwo
+50509.5
+window.timeThree
+50508.5
 
 
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 13 - MAKING NAVIGATION REUSABLE
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 213. Traditional Browser Navigation
+# 214. Theory of Navigation in React
+# 215. Extracting the DropdownPage
+# 216. Answering Critical Questions
+# 217. The PushState Function
+# 218. Handling Link Clicks
+# 219. Handling Back:Forward Buttons
+# 220. Navigation Context
+# 221. Listening to Forward and Back Clicks
+# 222. Programmatic Navigation
+# 223. A Link Component
+# 224. A Route Component
+# 225. Handling Control and Command Keys
+# 226. Link Styling
+# 227. Custom Navigation Hook
+# 228. Adding a Sidebar Component
+# 229. Highlighting the Active Link
+# 230. Navigation Wrapup
+_  ###############################################
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 14 - CREATING PORTALS WITH REACT DOM
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 231. Modal Component Overview
+# 232. Toggling Visibility
+# 233. At First Glance, Easy!
+# 234. We're Lucky it Works At All!
+# 235. Fixing the Modal with Portals
+# 236. Closing the Modal
+# 237. Customizing the Modal
+# 238. Additional Styling
+# 239. One Small Bug
+# 240. Modal Wrapup
+_  ###############################################
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 15 - MAKE A FEATURE-FULL DATA TABLE!
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 241. Creating a Reusable table
+# 242. Communicating Data to the Table
+# 243. Reminder on Table HTML Structure
+# 244. Building the Rows
+# 245. Better Styling
+# 246. Done! But It's Not Reusable
+# 247. Here's the Idea
+# 248. Dynamic Table Headers
+# 249. Rendering Individual Cells
+# 250. Fixed Cell Values
+# 251. Nested Maps
+# 252. Fixing the Color
+# 253. Adding a Key Function
+_  ###############################################
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 16 - GETTING CLEVER WITH DATA SORTING
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 254. Adding Sorting to the Table
+# 255. Reminder on Sorting in JavaScript
+# 256. Sorting Strings
+# 257. Sorting Objects
+# 258. Object Sort Implementation
+# 259. Reversing Sort Order
+# 260. Optional Sorting
+# 261. A Small Extra Feature
+# 262. Customizing Header Cells
+# 263. React Fragments
+# 264. The Big Reveal
+# 265. Adding SortableTable
+# 266. Watching for Header Cell Clicks
+# 267. Quick State Design
+# 268. Adding Sort State
+# 269. Yessssss, It Worked!
+# 270. Determining Icon Set
+# 271. Styling Header Cells
+# 272. Resetting Sort Order
+# 273. Table Wrapup
+_  ###############################################
 */
