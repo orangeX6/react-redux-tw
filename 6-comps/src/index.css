@@ -5,3 +5,7 @@
 button > svg {
   margin-right: 5px;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

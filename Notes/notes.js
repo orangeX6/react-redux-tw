@@ -631,6 +631,43 @@ window.timeThree
 # 230. Navigation Wrapup
 _  ###############################################
 
+# 214. Theory of Navigation in React
+-> User types our address in 
+  _ Always send back the same index.html file
+  * Create React App already does this
+  _ When app loads up, look at address bar and use it to decide what content to show
+  >> how do we look at the address bar?
+  * using window.location
+  >>which part of it do we care about?
+  * We only care about path  
+
+-> User clicks a link or presses 'back' button
+  _ Stop the browser's default page-switching behavior!
+  -> USER CLICKING ON A LINK
+  * location.pathname
+  * history.pushState({}, '', '/pathname')
+  NOTE - WHENEVER WE ARE AT AN ADDRESS WHICH WAS ADDED WITH pushState, THERE IS NO FULL PAGE REFRESH 
+
+  -> USER CLICKING ON FORWARD AND BACK BUTTON
+  # using popState event
+  # Window emits a 'popstate' event if the user current url was added by 'pushState'
+  * window.addEventListener('popstate', ()=>console.log('Im at', window.location.pathname))
+
+
+  _ Figure out where the user was trying to go
+  _ Update content on the screen to trick the user into thinking they swapped pages
+  _ Update the address bar to trick user into thinking they swapped pages 
+
+  NOTE - CALLING pushState DOES NOT TRIGGER A POPSTATE EVENT, SO WE HAVE TO UPDATE CURRENT PATH FOR THAT
+  SO BASICALLY WE NEED TO 
+  >> call pushState to update address bar
+  >> update currentPath state 
+  
+
+# 222. Programmatic Navigation
+_ Automatically navigate the user from code. For example bank apps logging out i.e. navigating you to homepage in case of inactivity
+
+
 
 
 
