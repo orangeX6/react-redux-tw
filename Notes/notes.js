@@ -776,4 +776,138 @@ _ 4 SortableTable should find column objects with 'sortValue' and add a 'header'
 _ 5 TH returned by the 'header' function should watch for click events
 _ 6 When user clicks on TH, sort data and pass the result to Table
 
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 17 - CUSTOM HOOKS IN DEPTH
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 274. Exploring Code Reuse
+# 275. Revisiting Custom Hooks
+# 276. Creating the Demo Component
+# 277. Custom Hook Creation
+# 278. Quick Note
+# 279. Hook Creation Process in Depth
+# 280. Making a Reusable Sorting Hook
+_  ###############################################
+# 277. Custom Hook Creation
+ _ CounterPage
+  ? count               -|        Seems kind of useful
+  >> useEffect            |->       Maybe we should
+  -> handleClick        -|           create a hook
+  # JSX
+
+NOTE STRATEGY FOR MAKING CUSTOM HOOKS 
+_ 1 Find code in a component related to a single piece of state  
+_ 2  Copy paste it all into a helper function
+_ 3  Find all broken references
+_ 4  TA-DAAAA, you now have a hook
+
+
+IMPORTANT 
+# HOOK CREATION PROCESS IN DEPTH
+IMPORTANT 
+-> BRUTE-FORCE HOOK CREATION
+_ 1 Make a function 'useSomething'
+_ 2 Find all non-JSX expressions that refer to 1-2 related pieces of state
+_ 3 Cut them all out, paste them into 'useSomething'
+_ 4 Find 'not defined' errors in your component
+_ 5 In your hook, return an object that contains the variables the component needs
+_ 6 In the component, call your hook. Destructure the properties the component needs
+_ 7 Find 'not defined' errors in the hook. Pass the missing variables in as arguments to the hook
+_ 8 Rename the hook to something more meaningful
+_ 9 Rename returned properties to something more descriptive
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 18 - INTO THE WORLD OF REDUCERS
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 281. App Overview
+# 282. Adding the Form
+# 283. More on the Form
+# 284. useReducer in Action
+# 285. Rules of Reducer Functions
+# 286. Understanding Action Objects
+# 287. Constant Action Types
+# 288. Refactoring to a Switch
+# 289. Adding New State Updates
+# 290. A Few Design Considerations Around Reducers
+# Quiz 12: A Few Questions on Reducers
+# 291. Introducing Immer
+# 292. Immer in Action
+_  ###############################################
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 19 - DIVE INTO REDUX TOOLKIT
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 293. Into the World of Redux
+# 294. Redux vs Redux Toolkit
+# 295. App Overview
+# 296. The Path Forward
+# 297. Implementation Time!
+# 298. Understanding the Store
+# 299. The Store's Initial State
+# 300. Understanding Slices
+# 301. Understanding Action Creators
+# 302. Connecting React to Redux
+# 303. Updating State from a Component
+# 304. Accessing State in a Component
+# 305. Removing Content
+# 306. Practice Updating State!
+# 307. Practice Accessing State!
+# 308. Even More State Updating!
+# 309. Resetting State
+# 310. Multiple State Updates
+# 311. Understanding Action Flow
+# 312. Watching for Other Actions
+# 313. Getting an Action Creator's Type
+# 314. Manual Action Creation
+# 315. File and Folder Structure
+# 316. Refactoring the Project Structure
+# 317. Link to Completed Project
+_  ###############################################
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 20 - MANAGING MULTIPLE SLICES WITH REDUX TOOLKIT
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 318. Project Overview
+# 319. Adding Component Boilerplate
+# 320. Thinking About Derived State
+# 321. Thinking About Redux Design
+# 322. Adding the Form Slice
+# 323. Maintaining a Collection with a Slice
+# 324. Creating the Store
+# 325. Form Values to Update State
+# 326. Receiving the Cost
+# 327. Dispatching During the Form Submission
+# 328. Awkward Double Keys
+# 329. Listing the Records
+# 330. Deleting Records
+# 331. CSS File for Download
+# 332. Adding Styling
+# 333. Form Reset on Submission
+# 334. Reminder on ExtraReducers
+# 335. Adding a Searching Input
+# 336. Derived State in useSelector
+# 337. Total Car Cost
+# 338. Highlighting Existing Cars
+_  ###############################################
+
+
 */
