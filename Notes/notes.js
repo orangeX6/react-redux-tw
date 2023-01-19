@@ -842,6 +842,28 @@ _ 9 Rename returned properties to something more descriptive
 # 291. Introducing Immer
 # 292. Immer in Action
 _  ###############################################
+# 284. useReducer in Action
+-> USE STATE VS USE REDUCERS
+_ useState -> Absolutely fine hook to use whenever component needs state
+
+_ useReducer
+_ 1 Alternative to useState
+_ 2 Produces state
+_ 3 Changing this state makes component rerender
+_ 4 Useful when you have several different closely-related pieces of state
+_ 5 Useful when future state values depend on current state
+
+
+# 291. Introducing Immer
+_ Immer is a library that allows us to change how we write reducers
+_ It allows us to write some code that directly modifies our state object
+
+_ SEE IMMER FOLDER FOR EXAMPLE
+* npm i immer
+
+# 292. Immer in Action
+>> use diffcheck to check difference b/w
+>> CounterPageReducerWithoutImmer and CounterPage
 
 
 # ⎛⎝(•‿•)⎠⎞
