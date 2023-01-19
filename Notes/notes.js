@@ -749,4 +749,31 @@ _  ###############################################
 # 272. Resetting Sort Order
 # 273. Table Wrapup
 _  ###############################################
+
+# 256. Sorting Strings
+const data = ['t','A','a','B','b']
+data.sort((a,b)=> a.localeCompare(b))
+
+
+# 263. React Fragments
+_ How fragments works ?
+function Echo({children}){
+  return children
+}
+<Echo key={column.label}>{column.header()}</Echo>;
+
+_React provides this echo function by default and its called Fragment
+
+
+import { Fragment } from 'react';
+ <Fragment key={column.label}>{column.header()}</Fragment>;
+
+# 265. Adding SortableTable
+_ 1 Create Sortable Table. 
+_ 2 Make sure TablePage shows SortableTable
+_ 3 Add 'sortValue' functions to column config in TablePage.
+_ 4 SortableTable should find column objects with 'sortValue' and add a 'header' function to them
+_ 5 TH returned by the 'header' function should watch for click events
+_ 6 When user clicks on TH, sort data and pass the result to Table
+
 */
