@@ -662,7 +662,7 @@ _  ###############################################
   SO BASICALLY WE NEED TO 
   >> call pushState to update address bar
   >> update currentPath state 
-  
+
 
 # 222. Programmatic Navigation
 _ Automatically navigate the user from code. For example bank apps logging out i.e. navigating you to homepage in case of inactivity
@@ -688,6 +688,16 @@ _ Automatically navigate the user from code. For example bank apps logging out i
 # 239. One Small Bug
 # 240. Modal Wrapup
 _  ###############################################
+# 234. We're Lucky it Works At All!
+ _ Correctly displaying a Modal is Hard
+ -> The background of the modal needs to cover the entire screen
+ -> The modal needs to cover up all existing content
+
+[...document.querySelectorAll('*')].filter((el)=> !['','static'].includes(el.style.position))
+
+[...document.querySelectorAll('*')].filter((el)=> el.style.position)
+
+[...document.querySelectorAll('*')].map((el)=> el.style.position).filter(el=>el!=='')
 
 
 # ⎛⎝(•‿•)⎠⎞
