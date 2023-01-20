@@ -866,6 +866,7 @@ _ SEE IMMER FOLDER FOR EXAMPLE
 >> CounterPageReducerWithoutImmer and CounterPage
 
 
+
 # ⎛⎝(•‿•)⎠⎞
 # SECTION 19 - DIVE INTO REDUX TOOLKIT
 ##################################################
@@ -898,8 +899,13 @@ _ SEE IMMER FOLDER FOR EXAMPLE
 # 316. Refactoring the Project Structure
 # 317. Link to Completed Project
 _  ###############################################
+# 293. Into the World of Redux
+-> WHAT IS REDUX?
+_ Redux is a library for managing state using the same techniques as useReducer
+_ State objects are usually more complicated than useReducers
 
-
+# 295. App Overview
+* https://codesandbox.io/s/rtk-360ssw
 
 
 # ⎛⎝(•‿•)⎠⎞
