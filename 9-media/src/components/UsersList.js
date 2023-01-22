@@ -63,6 +63,7 @@ function UsersList() {
     <div>
       <div className="flex flex-row justify-between m-3 items-center">
         <h1 className="m-2 text-xl">Users</h1>
+        {creatingUserError && 'ERROR CREATING USER'}
         <Button
           className="w-28 justify-center"
           loading={isCreatingUser}

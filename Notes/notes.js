@@ -1017,4 +1017,71 @@ _ see 79 04 dispatch promises image
 *     .catch(() => console.log('FAIL'));
 
 
+
+
+
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 21 - INTERACTING WITH API's USING ASYNC THUNK
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 379. Skipping to this Section?
+# 380. [Optional] Getting Caught Up
+# 381. Introducing Redux Toolkit Query
+# 382. Creating a RTK Query API
+# 383. Creating an Endpoint
+# 384. Using the Generated Hook
+# 385. A Few Immediate Notes
+# 386. Rendering the List
+# 387. Changing Data with Mutations
+# 388. Differences Between Queries and Mutations
+# 389. Options for Refetching Data
+# 390. Request De-Duplication
+# 391. Some Internals of Redux Toolkit Query
+# 392. Refetching with Tags
+# 393. Fine-Grained Tag Validation
+# 394. Styling Fixups
+# 395. Adding a Pause for Testing
+# 396. Implementing Delete Endpoints
+# 397. Refactoring the List
+# 398. Remove Implementation
+# 399. Easy Tag Invalidation
+# 400. Getting Clever with Cache Tags
+# 401. More Clever Tag Implementation
+# 402. Photos Feature Overview
+# 403. Lots of Photos Setup!
+# 404. Adding the Endpoints
+# 405. Creating the Photo
+# 406. Showing the List of Photos
+# 407. Adding Mouse-Over Deletes
+# 408. Adding Automatic Data Refetching
+_  ###############################################
+
+ 
+# 384. Using the Generated Hook
+NOTE - STEP 7 FROM 81-08 - rtkq image
+-> Whenever we create a piece of API a slice is created automatically, and that slice is gonna make a combined reducer. We have to connect that combined reducer upto all of the different reducers in the reducer object in configureStore
+NOTE - ⬇   
+_SEE FILE store/index.js
+>> one way of doing it is 
+reducer: {
+  users:usersReducer
+_ albums: albumsApi.reducer
+}
+_ and this will work because we have specified reducerPath as albums in albumsApi file
+>> to void typos we ll instead use
+reducer: {
+  users:usersReducer
+_ [albumsApi.reducerPath]: albumsApi.reducer
+}
+_ then we add middleware property to configureStore option obj
+_then we need to call setupListeners(store.dispatch)
+
+
+# 391. Some Internals of Redux Toolkit Query
+
+
 */
