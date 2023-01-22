@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Zyra"
+    },
+    {
+      "name": "Dixie Heidenreich",
+      "id": 3
+    },
+    {
+      "name": "Herman Turner",
+      "id": 6
+    },
+    {
+      "name": "Abraham Gusikowski",
+      "id": 7
+    },
+    {
+      "name": "Mr. Sylvester Wehner",
+      "id": 8
+    }
+  ],
+  "albums": [],
+  "photos": []
+}

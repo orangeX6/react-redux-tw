@@ -939,5 +939,82 @@ _  ###############################################
 
 
 
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 21 - INTERACTING WITH API's USING ASYNC THUNK
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 339. App Overview
+# 340. Adding a Few Dependencies
+# 341. Initial App Boilerplate
+# 342. API Server Setup
+# 343. Component Files
+# 344. Adding a Few Components
+# 345. Creating the Redux Store
+# 346. Thinking About Data Structuring
+# 347. Reminder on Request Conventions
+# 348. Data Fetching Techniques
+# 349. Optional Async Thunks Section
+# 350. Adding State for Data Loading
+# 351. Understanding Async Thunks
+# 352. Steps for Adding a Thunk
+# 353. More on Adding Thunks
+# 354. Wrapping up the Thunk
+# 355. Using Loading State
+# 356. Adding a Pause for Testing
+# 357. Adding a Skeleton Loader
+# 358. Animations with TailwindCSS
+# 359. Rendering the List of Users
+# 360. Creating New Users
+# 361. Unexpected Loading State
+# 362. Strategies for Fine-Grained Loading State
+# 363. Local Fine-Grained Loading State
+# 364. More on Loading State
+# 365. Handling Errors with User Creation
+# 366. Creating a Reusable Thunk Hook
+# 367. Creating a Fetch-Aware Button Component
+# 368. Better Skeleton Display
+# 369. A Thunk to Delete a User
+# 370. Updating the Slice
+# 371. Refactoring the Component
+# 372. Deleting the User
+# 373. Fixing a Delete Error
+# 374. Album Feature Overview
+# 375. Additional Components
+# 376. Adding the ExpandablePanel
+# 377. Wrapping Up the ExpandablePanel
+# 378. Adding the Albums Listing
+_  ###############################################
+# 340. Adding a Few Dependencies
+* npm install @faker-js/faker @reduxjs/toolkit react-redux axios classnames json-server react-icons
+* install tailwind
+* https://tailwindcss.com/docs/guides/create-react-app
+
+
+# 351. Understanding Async Thunks
+_ SEE IMAGES 
+-> When we create an async thunk it ll have the following three properties
+_ fetchUsers.pending === 'users/fetch/pending'
+_ fetchUsers.fulfilled === 'users/fetch/fulfilled'
+_ fetchUsers.rejected === 'users/fetch/rejected'
+const fetchUsers = createAsyncThunk('users/fetch', async () => {
+  const response = await axios.get(
+    'https://jsonplaceholder.typicode.com/users'
+  );
+
+  return response.data;
+});
+
+# 363. Local Fine-Grained Loading State
+! The js Promises rule is broken in the dispatch function
+_ see 79 04 dispatch promises image
+-> But we can fix this up a little by calling a function on here called unwrap
+-> Unwrap is going to give us a brand new promise back, and the promise we get is going to follow the conventional rules.
+* dispatch(fetchUsers())
+*     .unwrap()
+*     .then(() => console.log('SUCCESS'))
+*     .catch(() => console.log('FAIL'));
+
 
 */

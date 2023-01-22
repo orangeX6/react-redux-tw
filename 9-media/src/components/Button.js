@@ -1,6 +1,5 @@
-import classNames from 'classnames';
-// Don't need to import it here as we are declaring our own propType
-// import PropTypes from 'prop-types';
+import className from 'classnames';
+import { GoSync } from 'react-icons/go';
 
 function Button({
   children,
@@ -11,21 +10,23 @@ function Button({
   danger,
   outline,
   rounded,
+  loading,
   ...rest
 }) {
-  const classes = classNames(
+  const classes = className(
     rest.className,
-    'flex items-center mx-1 px-3 py-1.5 border-2',
+    'flex items-center px-3 py-1.5 border h-8',
     {
+      'opacity-80': loading,
       'border-blue-500 bg-blue-500 text-white': primary,
-      'border-gray-600 bg-gray-600 text-white': secondary,
+      'border-gray-900 bg-gray-900 text-white': secondary,
       'border-green-500 bg-green-500 text-white': success,
-      'border-yellow-400 bg-yellow-400 text-gray': warning,
+      'border-yellow-400 bg-yellow-400 text-white': warning,
       'border-red-500 bg-red-500 text-white': danger,
       'rounded-full': rounded,
       'bg-white': outline,
       'text-blue-500': outline && primary,
-      'text-gray-600': outline && secondary,
+      'text-gray-900': outline && secondary,
       'text-green-500': outline && success,
       'text-yellow-400': outline && warning,
       'text-red-500': outline && danger,
@@ -33,8 +34,8 @@ function Button({
   );
 
   return (
-    <button {...rest} className={classes}>
-      {children}
+    <button {...rest} disabled={loading} className={classes}>
+      {loading ? <GoSync className="animate-spin" /> : children}
     </button>
   );
 }
@@ -44,8 +45,8 @@ Button.propTypes = {
     const count =
       Number(!!primary) +
       Number(!!secondary) +
-      Number(!!success) +
       Number(!!warning) +
+      Number(!!success) +
       Number(!!danger);
 
     if (count > 1) {
