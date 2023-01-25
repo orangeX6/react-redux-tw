@@ -109,8 +109,7 @@ _ REACT QUERY
 
   
 # ⎛⎝(•‿•)⎠⎞
-
-# SECTION 1 - CREATING QUERIES AND LOADING / ERROR STATES
+# SECTION 2 - PAGINATION, PRE-FETCHING AND MUTATIONS
 ##################################################
 -> ###############################################
 >> ###############################################
@@ -166,5 +165,80 @@ _ useMutation
 _ https://tanstack.com/query/v4/docs/react/reference/useMutation
 
 
+
+
+# ⎛⎝(•‿•)⎠⎞
+# SECTION 3 - INFINITE QUERIES FOR LOADING DATA "JUST IN TIME"
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 21. Introduction to Infinite Scroll
+# 22. Code Quiz! Set up Infinite SWAPI for React Query
+# 23. Intro to useInfiniteQuery
+# 24. Infinite Scroll Diagram
+# 25. Write useInfiniteQuery Call
+# 26. InfiniteScroll Component
+# 27. useInfiniteQuery Fetching and Error states
+# 28. Code Quiz! Infinite Species
+# 29. Summary: Infinite Scroll
+_  ###############################################
+
+# 21. Introduction to Infinite Scroll
+_ useInfiniteQuery
+      -> Requires different API format than pagination
+      -> Pagination 
+            >> Tracks current page in component state
+            >> new query updates page number
+      => useInfiniteQuery tracks next query. 
+            _>> next query is returned as part of the data
+
+
+# 23. Intro to useInfiniteQuery
+_ Shape of useInfiniteQuery Data
+-> Shape of data different than useQuery
+=> Object with two properties
+      -> With useQuery, the data was simply the data that was returned from the query function, 
+      => but with useInfiniteQuery, the object actually has two properties
+      _ pages
+            => Array of objects for each page of Data
+      _ pageParams
+            => Its recording whats your param for every single page.
+            ! not widely used     
+
+=> Every query has its own element in the pages array, and that element represents the data for that query, the query is going to change as we advance the pages
+-> pageParams tracks the keys of queries that have been retrieved
+
+_ useInfiniteQuery SYNTAX
+=> pageParam is a parameter passed to the queryFn, and that looks like follows - 
+-> useInfiniteQuery("sw-people", ({pageParam = defaultUrl})=> fetchUrl(pageParam))
+>> Current value of pageParam is maintained by React-Query itself
+
+>> And we do that using 
+=>> useInfiniteQuery Options
+_ theres a getNextPageParam option
+_ Syn
+-> getNextParamPage: (lastPage,allPages)
+
+_useInfiniteQuery return object properties
+-> fetchNextPage
+      >> function to call when user needs more data
+-> hasNextPage
+      >> Based on return value of getNextPageParam
+      >> if Undefined, no more data
+-> isFetchingNextPage
+      >> for displaying loading spinner
+      >> distinguish between whether its fetching the next page or whether its just fetching in general
+
+###########      
+>>There are also some properties of the return object that are different from use query that we're going to use in order to implement our infinite scroll.
+_One is fetchNextPage.
+-> So this is the function that you want to call whenever the user needs more data, so even when they click the button that asks for more data or when they hit the point on the screen where they're about to run out of data.
+_Another one is hasNextPage, 
+->this is based on the return value of that get next page Param function, that property that we pass to use infinite query to tell it how to use the data from the last query to get whatever our next query is going to be.
+>> If this is undefined, that means that there's going to be no more data and has next page the property that's returned with the return object from use infinite query has next page will be false.
+_We also have isFetchingNextPage, 
+>>this is something that used query didn't have any concept of but
+_use infinite query can distinguish between whether it's fetching the next page or whether it's just fetching in general.
 
 */
