@@ -241,4 +241,16 @@ _We also have isFetchingNextPage,
 >>this is something that used query didn't have any concept of but
 _use infinite query can distinguish between whether it's fetching the next page or whether it's just fetching in general.
 
+
+# 26. InfiniteScroll Component
+=> React infinite scroller - Works nicely with useInfiniteQuery
+_ https://www.npmjs.com/package/react-infinite-scroller
+
+_ Populate two props for infiniteScroll component
+      >> loadMore={fetchNextPage} 
+      >> hasMore={hasNextPage}
+      fetchNextPage and hasNextPage returned from useInfiniteQuery
+_ Component takes care of detecting when to load more
+//  Data in date.pages[x].results 
+
 */
