@@ -78,4 +78,93 @@ _ REACT QUERY
   _ CALLBACKS
   -> And it provides callbacks so that you can take actions if your query is successful, if it returns an error. or you can provide a callback to take an action in either case.
 
+
+
+  # 10. staleTime vs cacheTime
+  _ STATE DATA 
+  -> Data refetch only triggers for stale data.
+      >> For example, component remount, window focus
+      >> staleTime translates to "max age"
+      -> staleTime makes data stale after specified number of milliseconds.
+      -> By default ReactQuery's staleTime is 0ms
+
+  _ WHY IS STALE TIME 0MS BY DEFAULT?
+  -> The explanation is quite simple -
+  => "How is the data on the screen always up to date?"
+  -> is a much better question to be asking than
+  => "Why is my data not updating?!"
+  - Tanner Linsley, creator of React Query
+
+  _ staleTime vs cacheTime
+  -> staleTime is for re-fetching
+  => Cache is for data that might be re-used later
+      >> query goes into "cold storage" if there is no active useQuery
+  =>> cache data expires after the configured cacheTime(default : Five Minutes)
+      >> The amount of time that the cache time is observing is since how long it has been since useQuery has been active
+  => After the cache expires the data is garbage collected
+  => Cache is backup data to display while fetching
+  ? Its better to show data which is slightly out of date while you are fetching new data than not to show anything at all
+
+
+
+  
+# ⎛⎝(•‿•)⎠⎞
+
+# SECTION 1 - CREATING QUERIES AND LOADING / ERROR STATES
+##################################################
+-> ###############################################
+>> ###############################################
+*  ###############################################
+# 11. Intro to Code Quizzes
+# 12. Code Quiz! Create Query for Blog Comments
+# 13. Query Keys
+# 14. Pagination
+# 15. Pre-fetching Data
+# 16. isLoading vs isFetching
+# 17. Intro to Mutations
+# 18. Delete Post with useMutation
+# 19. Code Quiz! Mutation to Update Post Title
+# 20. Summary: React Query Basics
+_  ###############################################
+# 14. Pagination
+-> Track current page in component state 
+(currentPage)
+-> Use query keys that include the page number 
+["posts", currentPage]
+-> User clicks "next page" or "previous page" button
+      >> Update currentPage state
+      >> fire off new query
+
+# 15. Pre-fetching Data
+-> PreFetch
+=>> Adds data to cache
+=>> automatically stale(configurable)
+=>> shows while re-fetching
+      -> as long as cache hasn't expired
+=>> Prefetching can be used for any anticipated data needs
+      -> Not just pagination
+_  https://tanstack.com/query/v4/docs/react/reference/QueryClient#queryclientprefetchquery
+
+
+# 16. isLoading vs isFetching
+_ isFetching 
+      -> The async query function hasn't yet resolved
+
+_ isLoading
+      -> no cached data + isFetching
+  
+# 17. Intro to Mutations
+=> Mutations: 
+-> Making a network call that changes data on the server
+
+_ useMutation
+=>> Similar to useQuery, but
+      -> Returns mutate function
+      -> doesn't need query key
+      -> isLoading but no isFetching
+      -> by default, no retries(configurable)
+_ https://tanstack.com/query/v4/docs/react/reference/useMutation
+
+
+
 */
